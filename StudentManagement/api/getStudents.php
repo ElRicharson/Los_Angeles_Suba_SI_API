@@ -1,5 +1,5 @@
 <?php
-$dbh = new PDO("mysql:host=localhost;dbname=schoolstd","root","root");
+include '../../connection.php';
 $sql = " SELECT * FROM schoolstudents ";
 $studentsQuery = $dbh->query($sql);
 $getStudents = $studentsQuery->fetchAll(PDO::FETCH_ASSOC);
